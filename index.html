@@ -1,0 +1,1155 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL SAFA - Study in China | Your Trusted Education Partner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #1a5276;
+            --secondary: #e74c3c;
+            --accent: #f39c12;
+            --light: #f5f5f5;
+            --dark: #333;
+            --text: #444;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #fff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 82, 118, 0.8), rgba(26, 82, 118, 0.9)), url('https://i.postimg.cc/8P9gBBfH/hong-kong-china-jpg-image-750-563-low.webp');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 180px 0 100px;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            background-color: var(--primary);
+            color: white;
+            font-size: 2.5rem;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-content h3 {
+            margin-bottom: 15px;
+        }
+
+        /* Packages Section */
+        .packages {
+            background-color: var(--light);
+        }
+
+        .packages-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .package-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+        }
+
+        .package-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .package-header h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .package-price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .package-features {
+            padding: 25px;
+        }
+
+        .package-features ul {
+            list-style: none;
+        }
+
+        .package-features ul li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .package-features ul li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .package-footer {
+            padding: 0 25px 25px;
+            text-align: center;
+        }
+
+        /* Documents Section */
+        .documents-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .document-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+        }
+
+        .document-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .document-header h3 {
+            color: white;
+            margin: 0;
+        }
+
+        .document-content {
+            padding: 25px;
+        }
+
+        .document-content ol {
+            margin-left: 20px;
+        }
+
+        .document-content li {
+            margin-bottom: 10px;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            background-color: var(--light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* Scholarships Section */
+        .scholarships-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .scholarship-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .scholarship-header {
+            background-color: var(--accent);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .scholarship-header h3 {
+            color: white;
+            margin: 0;
+        }
+
+        .scholarship-content {
+            padding: 25px;
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+            z-index: -1;
+        }
+
+        /* Student Life Section */
+        .student-life {
+            text-align: center;
+        }
+
+        .student-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .student-img {
+            height: 200px;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .contact-form {
+            text-align: center;
+        }
+
+        .contact-form .btn {
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        /* New Image Styles */
+        .section-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .package-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .document-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .scholarship-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+            
+            .step:not(:last-child):after {
+                display: none;
+            }
+            
+            .process-steps {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            nav ul li {
+                margin: 0 0 15px 0;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>AL <span>SAFA</span></h1>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#documents">Documents</a></li>
+                    <li><a href="#scholarships">Scholarships</a></li>
+                    <li><a href="#student-life">Student Life</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Study in China with AL SAFA Agency</h1>
+            <h2 style="color: white;">Your Trusted Path to Chinese Universities</h2>
+            <p>Are you ready to begin your academic journey in China? Our dedicated team of experienced agents offers full support to help you gain admission, travel, and settle smoothly in China.</p>
+            <a href="#contact" class="btn">Start Your Application</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <img src="https://i.postimg.cc/gjs1Z3FW/Network-services-scaled.webp" alt="Students studying in China" class="section-image">
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://i.postimg.cc/7Z8Z9yjF/1655302880400.jpg" alt="University Selection" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>University Selection</h3>
+                        <p>We help you choose the right university and program based on your academic background, interests, and career goals.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://i.postimg.cc/PJzqDvJS/Computer-Application-Assistant.jpg" alt="Application Assistance" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Application Assistance</h3>
+                        <p>Complete guidance through the application process, document preparation, and submission to ensure success.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://i.postimg.cc/k56Kbwmj/top-view-of-woman-holding-pen-near-document-with-v-2021-04-05-22-53-39-utc-2048x1367.jpg" alt="Visa Processing" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Visa Processing</h3>
+                        <p>Expert assistance with student visa applications, documentation, and interview preparation.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://i.postimg.cc/7LW1ks2R/01-holding-the-peninsula-hotel-renovation-beijing-china.webp" alt="Accommodation" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Accommodation</h3>
+                        <p>Help with finding suitable on-campus or off-campus accommodation according to your preferences and budget.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://i.postimg.cc/hPDCdF3d/luxury-gym-interior-design-3-1024x768.jpg" alt="Pre-departure Briefing" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Pre-departure Briefing</h3>
+                        <p>Comprehensive orientation about life in China, culture, and what to expect during your studies.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://i.postimg.cc/B6CVrJVs/52500810134-a4ba832888-o.webp" alt="Post-Arrival Support" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Post-Arrival Support</h3>
+                        <p>Continued support after you arrive in China, including airport pickup, registration, and settling in.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <h2>Our Service Packages</h2>
+            <img src="https://i.postimg.cc/YqDLN9H5/f857f761f9dac9e2dbb37d02e2a748d1.jpg" alt="Education packages" class="section-image">
+            <div class="packages-container">
+                <div class="package-card">
+                    <img src="https://i.postimg.cc/rpZ7ZZ60/20100923-Capitol-Sunset.jpg" alt="Standard Package" class="package-image">
+                    <div class="package-header">
+                        <h3>Standard Package</h3>
+                        <div class="package-price">$1,500</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li>Complete document submission to the university</li>
+                            <li>Admission support and guidance</li>
+                            <li>Visa guidance</li>
+                            <li>Pre-departure consultation</li>
+                            <li>Follow-up until arrival in China</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#contact" class="btn">Choose Package</a>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <img src="https://i.postimg.cc/DyjzXMTL/R-1.jpg" alt="VIP Package" class="package-image">
+                    <div class="package-header">
+                        <h3>VIP Package</h3>
+                        <div class="package-price">$2,000</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li>Everything in Standard Package</li>
+                            <li>Airport pick-up in China</li>
+                            <li>Hotel stay (first days)</li>
+                            <li>Domestic transportation (train to university city)</li>
+                            <li>Personal support from arrival until campus check-in</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#contact" class="btn">Choose Package</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section id="documents">
+        <div class="container">
+            <h2>Required Documents</h2>
+            <img src="https://i.postimg.cc/Dyhm5xp9/pexels-pixabay-357514.jpg" alt="Document preparation" class="section-image">
+            <div class="documents-container">
+                <div class="document-card">
+                    <img src="https://i.postimg.cc/ZYL7RDnS/stacks-paper-documents-table-library-93675-184180.avif" alt="Bachelor's Degree" class="document-image">
+                    <div class="document-header">
+                        <h3>Bachelor's Degree</h3>
+                    </div>
+                    <div class="document-content">
+                        <ol>
+                            <li>Application form</li>
+                            <li>Passport homepage</li>
+                            <li>High School Graduation Certificate</li>
+                            <li>High School Academic Transcript</li>
+                            <li>Recommendation Letter</li>
+                            <li>Bank statement</li>
+                            <li>Non-criminal Record</li>
+                            <li>Medical examination</li>
+                            <li>Personal resume (from junior high school to now)</li>
+                            <li>Passport size photograph with white background</li>
+                            <li>Study plan</li>
+                            <li>English language proficiency certificate (non-English speaking countries)</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="document-card">
+                    <img src="https://i.postimg.cc/5NbRxWSZ/smiling-university-student-holding-textbook-with-classmates-reading-background-1218867-300824.avif" alt="Master's Degree" class="document-image">
+                    <div class="document-header">
+                        <h3>Master's Degree</h3>
+                    </div>
+                    <div class="document-content">
+                        <ol>
+                            <li>Application form</li>
+                            <li>Passport homepage</li>
+                            <li>High School Graduation Certificate</li>
+                            <li>High School Academic Transcript</li>
+                            <li>Two Recommendation Letters (professor or associate professor)</li>
+                            <li>Bank statement</li>
+                            <li>Non-criminal Record</li>
+                            <li>Medical examination</li>
+                            <li>Your personal resume (from junior high school to now)</li>
+                            <li>Passport size photograph with white background</li>
+                            <li>Study plan</li>
+                            <li>Self-introduction Video (3-5min)</li>
+                            <li>English language proficiency certificate (non-English speaking countries)</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="document-card">
+                    <img src="https://i.postimg.cc/HkqWxtsV/college-graduation-pictures-d6vyqlcvzq5zhdiz.jpg" alt="PhD Degree" class="document-image">
+                    <div class="document-header">
+                        <h3>PhD Degree</h3>
+                    </div>
+                    <div class="document-content">
+                        <ol>
+                            <li>Application form</li>
+                            <li>Passport homepage</li>
+                            <li>High School Graduation Certificate</li>
+                            <li>High School Academic Transcript</li>
+                            <li>Two Recommendation Letters (professor)</li>
+                            <li>Bank statement</li>
+                            <li>Non-criminal Record</li>
+                            <li>Medical examination</li>
+                            <li>Your personal resume (from junior high school to now)</li>
+                            <li>Passport size photograph with white background</li>
+                            <li>Study plan</li>
+                            <li>Self-introduction Video (3-5min)</li>
+                            <li>English language proficiency certificate (non-English speaking countries)</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Why Choose AL SAFA?</h2>
+            <img src="https://i.postimg.cc/SR8vNWBC/cong-ty-agency.jpg" alt="Why choose us" class="section-image">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Experienced Team</h3>
+                    <p>Our team has years of experience helping students successfully study in China.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Trusted Partnerships</h3>
+                    <p>We have established relationships with top universities across China.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>High Success Rate</h3>
+                    <p>We have a proven track record of successful admissions for our students.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>We provide continuous support throughout your educational journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholarships Section -->
+    <section class="scholarships" id="scholarships">
+        <div class="container">
+            <h2>Scholarship Assistance</h2>
+            <img src="https://i.postimg.cc/vB6sf6R0/digital-marketing-agency.jpg" alt="Scholarship opportunities" class="section-image">
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">We help students secure scholarships to make studying in China more affordable. Our team has extensive experience with various scholarship programs including Chinese Government Scholarships, University Scholarships, and Provincial Scholarships.</p>
+            
+            <div class="scholarships-container">
+                <div class="scholarship-card">
+                    <img src="https://i.postimg.cc/hGVWpQPf/college-students.jpg" alt="Chinese Government Scholarship" class="scholarship-image">
+                    <div class="scholarship-header">
+                        <h3>Chinese Government Scholarship</h3>
+                    </div>
+                    <div class="scholarship-content">
+                        <p>Full or partial scholarships offered by the Chinese government to international students. Covers tuition, accommodation, and provides living allowance.</p>
+                        <ul>
+                            <li>Covers tuition fees</li>
+                            <li>Free university dormitory or accommodation subsidy</li>
+                            <li>Comprehensive medical insurance</li>
+                            <li>Monthly stipend</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="scholarship-card">
+                    <img src="https://i.postimg.cc/kX2HTRfH/599542201.jpg" alt="University Scholarships" class="scholarship-image">
+                    <div class="scholarship-header">
+                        <h3>University Scholarships</h3>
+                    </div>
+                    <div class="scholarship-content">
+                        <p>Scholarships directly offered by Chinese universities to attract outstanding international students.</p>
+                        <ul>
+                            <li>Full or partial tuition waiver</li>
+                            <li>Accommodation support</li>
+                            <li>Living allowance in some cases</li>
+                            <li>Available for both undergraduate and postgraduate studies</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="scholarship-card">
+                    <img src="https://i.postimg.cc/wjdS3TQX/China-Scholarship-Council-University-of-Oxford-Scholarships-for-Chinese-in-UK.webp" alt="Provincial Scholarships" class="scholarship-image">
+                    <div class="scholarship-header">
+                        <h3>Provincial Scholarships</h3>
+                    </div>
+                    <div class="scholarship-content">
+                        <p>Scholarships offered by provincial governments in China to promote international education in their regions.</p>
+                        <ul>
+                            <li>Varies by province</li>
+                            <li>Often covers tuition fees</li>
+                            <li>Sometimes includes accommodation</li>
+                            <li>Great opportunity for specific regions of China</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#contact" class="btn">Apply for Scholarship Assistance</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Life Section -->
+    <section class="student-life" id="student-life">
+        <div class="container">
+            <h2>Student Life in China</h2>
+            <img src="https://i.postimg.cc/P5Vq85tG/OIP-13.webp" alt="Student life in China" class="section-image">
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Experience vibrant campus life, cultural activities, and modern facilities at Chinese universities.</p>
+            
+            <div class="student-gallery">
+                <div class="student-img" style="background-image: url('https://i.postimg.cc/jjN62PRs/OIP-6.webp');"></div>
+                <div class="student-img" style="background-image: url('https://i.postimg.cc/2y521yHL/R-2.jpg');"></div>
+                <div class="student-img" style="background-image: url('https://i.postimg.cc/9QHZSzGR/OIP.jpg');"></div>
+                <div class="student-img" style="background-image: url('https://i.postimg.cc/T3Tq1ppg/OIP-8.webp');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us Today</h2>
+            <img src="https://i.postimg.cc/Hs9Ftbp6/black-man-call-center-phone-260nw-2310803487.webp" alt="Contact us" class="section-image">
+            <p style="text-align: center; margin-bottom: 40px;">Start your application now! Let AL SAFA help you make your dream to study in China a reality.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4>WhatsApp / Phone</h4>
+                            <p>+86 183 1661 9024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>aajunior205@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>China-based agency with global reach</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp-square"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Ready to Get Started?</h3>
+                    <p>Contact us directly via WhatsApp or email to begin your application process.</p>
+                    <a href="https://wa.me/8618316619024" class="btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Message on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>AL SAFA</h3>
+                    <p>Your trusted partner for studying in China. We provide comprehensive services to make your educational journey smooth and successful.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#documents">Documents</a></li>
+                        <li><a href="#scholarships">Scholarships</a></li>
+                        <li><a href="#student-life">Student Life</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">University Selection</a></li>
+                        <li><a href="#">Application Assistance</a></li>
+                        <li><a href="#">Visa Processing</a></li>
+                        <li><a href="#">Scholarship Help</a></li>
+                        <li><a href="#">Post-Arrival Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 AL SAFA Education Agency. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
